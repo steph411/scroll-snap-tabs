@@ -1,0 +1,98 @@
+.App {
+  font-family: Montserrat;
+  text-align: center;
+}
+
+:root {
+  --majorel-blue: #623cea;
+  --eggshell: #e7dfc6;
+  --black: #03191e;
+  --blue: #000022;
+  --cerise: #f61067;
+  --green: #00f0b5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.header {
+  margin-top: 2rem;
+}
+
+.header-items {
+  list-style: none;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 1rem 8rem; */
+  list-style-type: none;
+}
+
+.header-items > li {
+  width: 33%;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+a {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--black);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+a:is(:active, :target, [active]) {
+  background: var(--eggshell);
+}
+
+.selected {
+  background: var(--eggshell);
+}
+
+a:hover {
+  background: var(--eggshell);
+}
+
+.tab-snap {
+  width: 100vw;
+  background: var(--eggshell);
+  height: 70vh;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+#burgers {
+  background: var(--cerise);
+}
+
+#fruits {
+  background: var(--majorel-blue);
+}
+
+#nuts {
+  background: var(--green);
+}
+
+.tab-snap-item {
+  min-width: 100%;
+  scroll-snap-align: start;
+  height: 100%;
+  font-weight: bold;
+  font-size: 2.5rem;
+  display: grid;
+  place-items: center;
+}
